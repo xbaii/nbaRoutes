@@ -2,7 +2,7 @@
   <div class="team-container">
     <img src="images/jazz-logo.png">
     <h4> Utah Jazz <br />Wins: {{jazzData.wins}} Losses: {{jazzData.losses}}</h4>
-    <div class="together-game" ng-repeat="game in jazzData" ng-class="{'even' : $index % 2 === 0}">
+    <div class="together-game" ng-repeat="game in jazzData">
       Date: {{game.createdAt | date}} <br />
       Utah Jazz - {{game.homeTeamScore}} <br />
       {{game.opponent}} - {{game.opponentScore}} <br />
@@ -11,7 +11,7 @@
   <div class="team-container">
     <img src="images/lakers-logo.png">
     <h4> Los Angeles Lakers <br /> Wins: {{lakerData.wins}} Losses: {{lakerData.losses}} </h4>
-    <div class="together-game" ng-repeat="game in lakerData" ng-class="{'even' : $index % 2 === 0}">
+    <div class="together-game" ng-repeat="game in lakerData">
       Date: {{game.createdAt | date}} <br />
       Los Angeles Lakers - {{game.homeTeamScore}} <br />
       {{game.opponent}} - {{game.opponentScore}} <br />
@@ -20,10 +20,13 @@
   <div class="team-container">
     <img src="images/heat-logo.png">
     <h4> Miami Heat <br /> Wins: {{heatData.wins}} Losses: {{heatData.losses}} </h4>
-    <div class="together-game" ng-repeat="game in heatData" ng-class="{'even' : $index % 2 === 0}">
+    <div class="together-game" ng-repeat="game in heatData" >
       Date: {{game.createdAt | date}} <br />
       Miami Heat - {{game.homeTeamScore}} <br />
       {{game.opponent}} - {{game.opponentScore}} <br />
     </div>
   </div>
 </div>
+
+
+<!-- ng-class="{'even' : $index % 2 === 0} -->
